@@ -11,6 +11,11 @@ function App() {
       ref={calendarRef}
       day={null}
       month={null}
+      disableViewer={true}
+      onEventClick={(event) => {
+        console.log("Event clicked", event);
+      }}
+      editable={false}
       week={{
         weekDays: [0, 1, 2, 3, 4, 5],
         weekStartOn: 6,
@@ -19,6 +24,7 @@ function App() {
         step: 30,
       }}
       events={EVENTS}
+
       // events={generateRandomEvents(200)}
     />
   );
