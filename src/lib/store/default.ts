@@ -24,7 +24,7 @@ const defaultWeek = {
 const defaultDay = {
   startHour: 9,
   endHour: 17,
-  step: 60,
+  step: 123,
   navigation: true,
 };
 

@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&display=swap');
+.example {
+
+    padding: 0.5rem 1rem; /* 2 units vertical and 4 units horizontal padding */
+    background-color: #009ACD; /* Darker blue on hover */
+}
+
+
+
+.example:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}

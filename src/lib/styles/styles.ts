@@ -114,6 +114,7 @@ export const TableGrid = styled("div")<{
   "& .rs__cell": {
     background: theme.palette.background.paper,
     position: "relative",
+
     borderStyle: "solid",
     borderColor: theme.palette.grey[300],
     borderWidth: "0 1px 1px 0",
