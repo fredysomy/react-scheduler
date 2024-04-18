@@ -48,21 +48,22 @@ const EventItem = ({ event, multiday, hasPrev, hasNext, showdate = true }: Event
     fontFamily: "Baloo Chettan 2, sans-serif",
     color: "#333",
   });
+
   const CustomButton = styled(Button)({
-    display: "inline-flex",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     whiteSpace: "nowrap",
     fontSize: "12px", // 14px assuming 16px to be 1rem
     height: "22x", // 2.5rem equivalent assuming 1rem = 16px
-    backgroundColor: "#00BFFF",
+    backgroundColor: "#55ADC3",
     color: "white",
     fontWeight: 500,
     padding: "8px 16px", // 0.5rem 1rem equivalent
 
     boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
     "&:hover": {
-      backgroundColor: "#009ACD",
+      backgroundColor: "#55ADC3",
     },
     "&.Mui-disabled": {
       pointerEvents: "none",
@@ -87,14 +88,10 @@ const EventItem = ({ event, multiday, hasPrev, hasNext, showdate = true }: Event
     let item = (
       <>
         <div style={{ padding: "3px 6px" }}>
-          <CustomTypography
-            variant="subtitle2"
-            style={{ fontSize: 25, fontFamily: " Baloo Chettan 2, sans-serif" }}
-            noWrap
-          >
+          <CustomTypography variant="subtitle2" style={{ fontSize: 20 }} noWrap>
             {event.title}
           </CustomTypography>
-          <CustomTypography variant="subtitle2" style={{ fontSize: 12 }} noWrap>
+          {/* <CustomTypography variant="subtitle2" style={{ fontSize: 15 }} noWrap>
             {new Date(event.start).getDate().toString() ===
               new Date(event.end).getDate().toString() &&
             new Date(event.start).toLocaleString("en-us", { month: "short" }) ===
@@ -109,14 +106,20 @@ const EventItem = ({ event, multiday, hasPrev, hasNext, showdate = true }: Event
                 )
                   .getDate()
                   .toString()}`}
-          </CustomTypography>
-          {showdate && (
-            <CustomTypography style={{ fontSize: 11 }} noWrap>
+          </CustomTypography> */}
+          <CustomTypography
+            variant="subtitle2"
+            style={{ fontSize: 25, fontFamily: " Baloo Chettan 2, sans-serif" }}
+            noWrap
+          ></CustomTypography>
+          {/* {showdate && (
+            <CustomTypography style={{ fontSize: 13 }} noWrap>
               {`${format(event.start, hFormat, {
                 locale,
               })} - ${format(event.end, hFormat, { locale })}`}
             </CustomTypography>
-          )}
+          )} */}
+          <CustomTypography style={{ fontSize: 14 }}>{event.room}</CustomTypography>
         </div>
         <div
           style={{
@@ -125,11 +128,7 @@ const EventItem = ({ event, multiday, hasPrev, hasNext, showdate = true }: Event
             bottom: 5,
             left: 5,
           }}
-        >
-          <CustomButton variant="contained" size="small">
-            View Meeting
-          </CustomButton>
-        </div>
+        ></div>
       </>
     );
     if (multiday) {

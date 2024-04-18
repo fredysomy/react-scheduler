@@ -4,42 +4,24 @@ export const EVENTS: ProcessedEvent[] = [
   {
     event_id: 1,
     title: "Event 1 (Disabled)",
+    room: "room2",
     start: new Date(new Date(new Date().setHours(9)).setMinutes(0)),
     end: new Date(new Date(new Date().setHours(10)).setMinutes(0)),
     disabled: true,
-    admin_id: [1, 2, 3, 4],
+    draggable: false,
   },
   {
     event_id: 2,
     title: "Event 2",
+    room: "room2",
     start: new Date(new Date(new Date().setHours(10)).setMinutes(0)),
-    end: new Date(new Date(new Date().setHours(12)).setMinutes(0)),
+    end: new Date(new Date(new Date().setHours(10)).setMinutes(30)),
     admin_id: 2,
     color: "#50b500",
+    draggable: false,
     agendaAvatar: "E",
   },
-  {
-    event_id: 3,
-    title: "Event 3",
-    start: new Date(new Date(new Date().setHours(11)).setMinutes(0)),
-    end: new Date(new Date(new Date().setHours(12)).setMinutes(0)),
-    admin_id: 1,
-    editable: false,
-    deletable: false,
-  },
-  {
-    event_id: 4,
-    title: "Event 4",
-    start: new Date(
-      new Date(new Date(new Date().setHours(9)).setMinutes(30)).setDate(new Date().getDate() - 2)
-    ),
-    end: new Date(
-      new Date(new Date(new Date().setHours(11)).setMinutes(0)).setDate(new Date().getDate() - 2)
-    ),
-    admin_id: [2, 3],
-    color: "#900000",
-    allDay: true,
-  },
+
   {
     event_id: 5,
     title: "Event 5",
@@ -50,17 +32,19 @@ export const EVENTS: ProcessedEvent[] = [
       new Date(new Date(new Date().setHours(14)).setMinutes(0)).setDate(new Date().getDate() - 2)
     ),
     admin_id: 2,
+    room: "room2",
+    draggable: false,
     editable: true,
   },
   {
     event_id: 6,
     title: "Event 6",
+    room: "room2",
     start: new Date(
       new Date(new Date(new Date().setHours(20)).setMinutes(30)).setDate(new Date().getDate() - 3)
     ),
     end: new Date(new Date(new Date().setHours(23)).setMinutes(0)),
     admin_id: 2,
-    allDay: true,
     sx: { color: "purple" },
   },
   {
@@ -74,7 +58,7 @@ export const EVENTS: ProcessedEvent[] = [
     ),
     admin_id: 1,
     draggable: false,
-    color: "#8000cc",
+    room: "room2",
   },
   {
     event_id: 8,
@@ -85,8 +69,10 @@ export const EVENTS: ProcessedEvent[] = [
     end: new Date(
       new Date(new Date(new Date().setHours(14)).setMinutes(30)).setDate(new Date().getDate() + 30)
     ),
+    draggable: false,
     admin_id: 1,
-    color: "#8000cc",
+
+    room: "room2",
   },
 ];
 

@@ -9,9 +9,11 @@ function App() {
   return (
     <Scheduler
       ref={calendarRef}
-      day={null}
       month={null}
+      agenda={false}
+      day={null}
       disableViewer={true}
+      draggable={false}
       onEventClick={(event) => {
         console.log("Event clicked", event);
       }}
